@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
+      >Course Details</a
+    >
+    <a href="#">Sections</a>
+    <a href="/Kanbas/Courses/Settings/Course Navigation/screen.html"
+      >Navigation</a
+    >
+    <a href="#">Apps</a>
+    <a href="#">Feature Option</a>
+    <a href="#">Integration</a>
+    <h2>Course Details</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td width="200" valign="top"><label for="cd-image">Image:</label></td>
+          <td><button id="cd-image">Choose Image</button><br /><br /></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-name">Name:</label></td>
+          <td>
+            <div id="cd-name">
+              CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]
+            </div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-course-code">Course Code:</label></td>
+          <td>
+            <div id="cd-course-code">CS4550.12631.202410</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-blueprint-course">Blueprint Course:</label>
+          </td>
+          <td>
+            <div id="cd-blueprint-course">No</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-course-template">Course template:</label>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              value="Course Template Enabled"
+              id="cd-course-template"
+            />
+            <span>Enable Course as Course Template</span><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-time-zone">Time Zone:</label></td>
+          <td>
+            <select id="cd-time-zone">
+              <option value="est US-CAN">
+                Eastern Time (US & CANADA) (-5:00/-4:00)
+              </option></select
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-sis-id">SIS ID:</label></td>
+          <td>
+            <div id="cd-sis-id">CS4550.12631.202410</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-sub-account">Sub Account:</label></td>
+          <td>
+            <div id="cd-sub-account">CS Undergrad</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-term">Term:</label></td>
+          <td>
+            <div id="cd-term">202410_1 Fall 2023 Semester Full Term</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-participation">Participation:</label>
+          </td>
+          <td>
+            <select id="cd-participation">
+              <option value="Term">Term</option>
+              <option value="Term-f23">Fall 23</option>
+              <option value="Term-s24">Spring 24</option>
+            </select>
+            <div>Course participation limited to termstart and end dates</div>
+            <br />
+            <label for="cd-participation-start-date">START </label><br />
+            <input
+              type="date"
+              id="cd-participation-start-date"
+              value="2000-01-21"
+            /><br /><br />
+            <label for="cd-participation-end-date">END </label><br />
+            <input
+              type="date"
+              id="cd-participation-end-date"
+              value="2000-01-21"
+            /><br /><br />
+            <input type="checkbox" value="restrict-1" id="cd-restrict-1" />
+            <label for="cd-restrict-1"
+              >Restrict students from viewing course before the start
+              date.</label
+            ><br />
+            <input type="checkbox" value="restrict-2" id="cd-restrict-2" />
+            <label for="cd-restrict-2"
+              >Restrict student from viewing course after term end dates.</label
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-default-due-time">Default Due time:</label>
+          </td>
+          <td>
+            <select id="default-due-time">
+              <option value="Account Default">Account Default (11:59pm)</option>
+            </select>
+            <div>Course participation limited to termstart and end dates</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-language">Language:</label></td>
+          <td>
+            <select id="cd-language">
+              <option value="Not Set">
+                Not Set(user-configurable, defaults to English)
+              </option>
+            </select>
+            <div>
+              This influeces the user interface for setting due dates. It does
+              not change the time due for any existing application.
+            </div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-file-storage">File Storage:</label>
+          </td>
+          <td>
+            <div id="cd-file-storage">10000 megabytes</div>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-large-course">Large Course:</label>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              value="Launch SpeedGrader"
+              id="cd-large-course"
+            />
+            <span>Launch SpeedGrader Filtered by student group</span
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-grading-scheme">Grading Scheme:</label>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              value="Enable Course Grading"
+              id="cd-grading-scheme"
+            />
+            <span>Enable course grading scheme</span><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-license">License:</label></td>
+          <td>
+            <select id="cd-licence">
+              <option value="Private licence">Private (Copyrighted)</option>
+              <option value="Public licence">Public</option></select
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-file-copyright">File Copyright:</label>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              value="File Copyright Needed"
+              id="file-copy"
+            />
+            <label for="file-copy"
+              >Copyright and licence inbformation must be provided for files
+              before they are published.</label
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-visibility">Visibility:</label></td>
+          <td>
+            <div>
+              If you need to makeyour course public please contact your
+              administrator/support.
+            </div>
+            <select id="cd-visibility">
+              <option value="Course">Course</option>
+            </select>
+            <br />
+            <input
+              type="checkbox"
+              value="In public course index"
+              id="cd-visibility-1"
+            />
+            <label for="cd-visibility-1"
+              >Include this course in the public course Index.</label
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-format">Format:</label></td>
+          <td>
+            <select id="cd-format">
+              <option value="On-Campus">On Campus</option>
+              <option value="Online">Online</option></select
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="cd-mastery-paths">Mastery Paths:</label>
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              value="Enable Mastery Path"
+              id="cd-mastery-paths"
+            />
+            <span
+              >Enable individual learning paths for students based on
+              assessment</span
+            >
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="cd-description">Description:</label></td>
+          <td>
+            <textarea id="cd-description" cols="50" rows="6"></textarea><br />
+            <a href="#">More Options</a><br /><br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+    >
+    <button>Update Course Details</button>
+  </body>
+</html>
