@@ -18,6 +18,22 @@
   padding-bottom: 6px;
 }
 
+.wd-navigation-mini li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.wd-navigation-mini li i {
+  margin-right: 10px;
+  color: red;
+}
+
 .wd-navigation li.wd-active {
   border-left: 2px solid black;
 }
