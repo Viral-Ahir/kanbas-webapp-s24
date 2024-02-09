@@ -1,0 +1,63 @@
+.va-asmt-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.va-grade-input-header {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+table {
+  border-collapse: separate;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr repeat(9, 1fr);
+  justify-content: center;
+  /* gap: 10px; */
+}
+
+.grid-item {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  color: #111;
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.input-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.input-cell input {
+  width: 70px;
+  text-align: center;
+}
+
+.grid-item:nth-child(10n + 1):not(:first-child) {
+  color: red;
+}
+
+.grid-item:nth-child(20n + 1),
+.grid-item:nth-child(20n + 2),
+.grid-item:nth-child(20n + 3),
+.grid-item:nth-child(20n + 4),
+.grid-item:nth-child(20n + 5),
+.grid-item:nth-child(20n + 6),
+.grid-item:nth-child(20n + 7),
+.grid-item:nth-child(20n + 8),
+.grid-item:nth-child(20n + 9),
+.grid-item:nth-child(20n + 10) {
+  background-color: #eee;
+}

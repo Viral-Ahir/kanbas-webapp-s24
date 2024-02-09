@@ -4,9 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grades</title>
+
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Grades/index.css" />
   </head>
   <body>
-    <table width="100%">
+    <div class="va-asmt-edit-header">
+      <div class="va-asmt-header-right">
+        <button class="va-button-grey me-1">
+          <i class="fa-solid fa-file-import me-2"></i>Import
+        </button>
+        <button class="va-button-grey me-2">
+          <i class="fa-solid fa-file-export me-2"></i>Export
+        </button>
+        <button class="va-button-grey me-3">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-12 mt-2">
+      <div class="row">
+        <div class="col-6">
+          <span class="va-grade-input-header">Student Names</span>
+        </div>
+
+        <div class="col-6">
+          <span class="va-grade-input-header">Assignment Names</span>
+        </div>
+
+        <div class="col-6">
+          <input
+            class="form-control"
+            type="text"
+            name="StudentName"
+            placeholder="Search Students"
+            title="Search using name of the students"
+          />
+        </div>
+
+        <div class="col-6">
+          <input
+            class="form-control"
+            type="text"
+            name="AssignmentName"
+            placeholder="Search Assignments"
+            title="Search using name of the assignments"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="va-asmt-edit-header1 mt-3">
+      <div class="va-asmt-header-right">
+        <button class="va-button-grey me-1 mb-3">
+          <i class="fa-solid fa-filter me-2"></i>Apply Filter
+        </button>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item header">Student Name</div>
+      <div class="grid-item header">A1</div>
+      <div class="grid-item header">A2</div>
+      <div class="grid-item header">A3</div>
+      <div class="grid-item header">A4</div>
+      <div class="grid-item header">A5</div>
+      <div class="grid-item header">A6</div>
+      <div class="grid-item header">E1</div>
+      <div class="grid-item header">E2</div>
+      <div class="grid-item header">P1</div>
+
+      <div class="grid-item">Joey</div>
+      <div class="grid-item">98</div>
+      <div class="grid-item">89</div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">90</div>
+      <div class="grid-item input-cell">
+        <input
+          type="number"
+          name="grade_entry"
+          class="form-control text-center"
+          value="99"
+        />
+        <i class="fa-solid fa-circle-right btn"></i>
+      </div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">90</div>
+
+      <div class="grid-item">Racheal</div>
+      <div class="grid-item">99</div>
+      <div class="grid-item input-cell">
+        <input
+          type="number"
+          name="grade_entry"
+          class="form-control text-center"
+          value="99"
+        />
+        <i class="fa-solid fa-circle-right btn"></i>
+      </div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">98</div>
+
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+
+      <div class="grid-item">Chandler</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item input-cell">
+        <input
+          type="number"
+          name="grade_entry"
+          class="form-control text-center"
+          value="100"
+        />
+        <i class="fa-solid fa-circle-right btn"></i>
+      </div>
+      <div class="grid-item">100</div>
+
+      <div class="grid-item">Monica</div>
+      <div class="grid-item">99</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">99</div>
+      <div class="grid-item input-cell">
+        <input
+          type="number"
+          name="grade_entry"
+          class="form-control text-center"
+          value="99"
+        />
+        <i class="fa-solid fa-circle-right btn"></i>
+      </div>
+      <div class="grid-item">99</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">99</div>
+      <div class="grid-item">100</div>
+      <div class="grid-item">100</div>
+    </div>
+    <!-- <table width="100%">
       <tr>
         <td>
           <select>
@@ -36,11 +187,11 @@
           <input placeholder="Search Assignments" /><br />
         </td>
       </tr>
-    </table>
+    </table> -->
 
-    <button>Apply Filters</button>
+    <!-- <button>Apply Filters</button> -->
 
-    <table border="1">
+    <!-- <table border="1">
       <thead>
         <tr>
           <th width="200">Student Name</th>
@@ -110,6 +261,6 @@
           <td>100</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </body>
 </html>

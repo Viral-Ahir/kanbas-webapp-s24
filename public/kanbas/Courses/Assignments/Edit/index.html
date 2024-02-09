@@ -4,9 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/Edit/index.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
   </head>
   <body>
-    <table>
+    <div class="va-asmt-edit-header">
+      <div class="va-asmt-header-right">
+        <button class="va-button-in-green">
+          <i class="fa-solid fa-circle-check me-2"></i>Published
+        </button>
+        <button class="va-button-grey me-3">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+      </div>
+    </div>
+    <hr />
+    <form action="../screen.html">
+      <div class="ms-5">
+        <div class="row mt-2">
+          <label class="ps-0" for="assignment_name">Assignment Name</label>
+          <input
+            type="text"
+            name="assignment_name"
+            id="assignment_name"
+            class="form-control w-50"
+            value="A1"
+          />
+        </div>
+        <div class="row mt-3">
+          <textarea
+            name="description"
+            id="description"
+            cols="20"
+            rows="10"
+            class="form-control w-50"
+          >
+                Assignment Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi officiis quisquam, omnis incidunt blanditiis alias magni quidem iusto eos sunt minus similique! Aspernatur sequi consequuntur voluptatem mollitia quis quibusdam autem libero dolore quo iure? Magni omnis eius, repellendus quo voluptatibus sunt repellat odio in quisquam dolore assumenda enim distinctio.
+        </textarea
+          >
+        </div>
+        <div class="row mt-3">
+          <div class="col-2">
+            <label class="form-label float-end" for="points">Points</label>
+          </div>
+          <div class="col-4">
+            <input
+              type="number"
+              id="points"
+              min="0"
+              max="100"
+              value="100"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-2">
+            <label class="form-label float-end" for="assignment-group">
+              Assignment Group</label
+            >
+          </div>
+          <div class="col-4">
+            <select
+              id="assignment-group"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="ASSIGNMENTS" selected="">ASSIGNMENTS</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-2">
+            <label class="form-label float-end" for="grade-display">
+              Display Grade as</label
+            >
+          </div>
+          <div class="col-4">
+            <select
+              id="grade-display"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option value="Percentage" selected="">Percentage</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-2">
+            <label class="form-label float-end" for="Assign"> Assign</label>
+          </div>
+          <div class="col-8">
+            <div class="row border border-1" style="width: 50%">
+              <div class="col-12">
+                <label class="form-label mt-2">
+                  <h5>Assign to</h5>
+                  <input
+                    class="form-control"
+                    id="Assign"
+                    type="text"
+                    value="Everyone"
+                  />
+                </label>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="Due"> Due</label>
+                <input
+                  class="form-control"
+                  id="Due"
+                  type="date"
+                  value="2021-01-01"
+                />
+              </div>
+
+              <div class="col-6 pe-0 mt-2">
+                <label class="form-label" for="available-from">
+                  Available from</label
+                >
+                <input
+                  class="form-control"
+                  id="available-from"
+                  type="date"
+                  value="2021-01-01"
+                />
+              </div>
+
+              <div class="col-6 ps-1 mt-2">
+                <label class="form-label" for="until"> Until</label>
+                <input
+                  class="form-control"
+                  id="until"
+                  type="date"
+                  value="2021-01-01"
+                />
+              </div>
+
+              <div class="col-12 pe-0 ps-0 mt-4">
+                <button class="va-button-grey w-100">
+                  <i class="fa-solid fa-plus"></i>
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="va-asmt-edit-header1">
+          <div>
+            <input id="chkbox-update" type="checkbox" class="ms-4 me-2" /><label
+              for="chkbox-update"
+              >Notify users that this content has changed</label
+            >
+          </div>
+          <div class="va-asmt-header-right me-4">
+            <a href="/Kanbas/Courses/Assignments/screen.html"
+              ><button class="va-button-grey" type="submit">Cancel</button></a
+            >
+            <a href="/Kanbas/Courses/Assignments/screen.html"
+              ><button class="va-button-red" type="submit">Submit</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- <table>
       <tbody>
         <tr>
           <td>
@@ -169,6 +338,6 @@ This is the assignment Description</textarea
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </body>
 </html>

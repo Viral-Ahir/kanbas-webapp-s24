@@ -4,200 +4,445 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <table>
-      <tr>
-        <td valign="top">
-          <ul>
-            <li>
-              <a href="/Kanbas/Account/Profile/screen.html"> Account</a>
-            </li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </td>
-        <td valign="top">
-          <ul>
-            <li>
-              <a href="/Kanbas/Courses/Home/screen.html">Home</a>
-            </li>
-            <li>
-              <a href="#">Modules</a>
-            </li>
-            <li>
-              <a href="#">Piazza</a>
-            </li>
-            <li>
-              <a href="#">Zoom Meetings</a>
-            </li>
-            <li>
-              <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-            </li>
-            <li>
-              <a href="#">Quizzes</a>
-            </li>
-            <li>
-              <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
-            </li>
-            <li>
-              <a href="#">People</a>
-            </li>
-            <li>
-              <a href="#">Panapto Video</a>
-            </li>
-            <li>
-              <a href="#">Discussions</a>
-            </li>
-            <li>
-              <a href="#">Announcements</a>
-            </li>
-            <li>
-              <a href="#">Pages</a>
-            </li>
-            <li>
-              <a href="#">Files</a>
-            </li>
-            <li>
-              <a href="#">Rubrics</a>
-            </li>
-            <li>
-              <a href="#">Outcomes</a>
-            </li>
-            <li>
-              <a href="#">Collaborations</a>
-            </li>
-            <li>
-              <a href="#">Syllabus</a>
-            </li>
-            <li>
-              <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
-                >Settings</a
-              >
-            </li>
-          </ul>
-        </td>
-        <td>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </td>
-        <td valign="top">
-          <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
-            >Course Details</a
-          >
-          <a href="#">Sections</a>
-          <a href="/Kanbas/Courses/Settings/Course Navigation/screen.html"
-            >Navigation</a
-          >
-          <a href="#">Apps</a>
-          <a href="#">Feature Option</a>
-          <a href="#">Integration</a>
-          <br />
-          <br />
-          <div>Drag and drop items to reorder themin the course navigation</div>
-          <br />
-          <table border="1" cellspacing="0" cellpadding="3" width="400">
-            <tbody>
-              <tr>
-                <td>&nbsp; Home</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Modules &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Piazza &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Zoom Meetings &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Assignments &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Quizzes &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Grades &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; People &vellip;</td>
-              </tr>
-              <tr>
-                <td>&nbsp; Panapto Video &vellip;</td>
-              </tr>
-            </tbody>
-          </table>
-          <br />
-          <div>Drag items here to hide them from students.</div>
-          <div>
-            Disabling most pages will cause students who visit those pages to be
-            redirected to the course home page.
+    <div class="d-flex">
+      <div class="d-none d-md-block me-3">
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="http://northeastern.edu"
+              ><img src="../../../../images/neu_logo.png" width="60px" />
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Account/Profile/screen.html"
+              ><i
+                class="fa-solid fa-circle-user va-navigation-profile-white"
+              ></i>
+              <div>Account</div></a
+            >
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div>Dashboard</div></a
+            >
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fa-solid fa-book"></i>
+              <div>Courses</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-calendar"></i>
+              <div>Calendar</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-inbox"></i>
+              <div>Inbox</div></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-clock"></i>
+              <div>History</div></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-tv"></i>
+              <div>Studio</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <div>Commons</div></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-circle-question"></i>
+              <div>Help</div></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-fill ms-3 me-4">
+        <div class="row d-block d-md-none">
+          <div class="va-flex-header-mini">
+            <div>
+              <a
+                class="va-colour-white collapsed"
+                data-bs-toggle="collapse"
+                href="#collapseKanbasNav"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                ><i class="fa-solid fa-bars"></i
+              ></a>
+            </div>
+            <div class="va-section-title-mini">
+              <div class="va-section-title-mini-main">CS5610.12631.20247</div>
+              <div class="va-section-title-mini-sub">Settings</div>
+            </div>
+            <div class="va-button-black">
+              <a href="#" class="va-colour-white"
+                ><i class="fa-solid fa-glasses"></i>
+              </a>
+              <a
+                class="va-colour-white collapsed"
+                data-bs-toggle="collapse"
+                href="#collapseCourseNav"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></a>
+            </div>
           </div>
-          <table border="1" cellspacing="0" cellpadding="3" width="400">
-            <tbody>
-              <tr>
-                <td>
-                  <div>&nbsp; Chat &vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>&nbsp; SCORM &vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>&nbsp; Attendance &vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>&nbsp; Barnes and nobel Bookstore&vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>&nbsp; Digication &vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div>&nbsp; Top Hat &vellip;</div>
-                  <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
-                    navigation
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </table>
+          <div class="collapse" id="collapseKanbasNav">
+            <div class="card card-body">
+              <ul class="wd-navigation">
+                <li>
+                  <a href="/Kanbas/Account/Profile/screen.html"
+                    ><i
+                      class="fa-solid fa-circle-user va-navigation-profile-white"
+                    ></i>
+                    Account</a
+                  >
+                </li>
+                <li>
+                  <a href="/Kanbas/Dashboard/screen.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Home/screen.html">
+                    <i class="fa-solid fa-book"></i>
+                    Courses</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-regular fa-clock"></i>
+                    History</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-tv"></i>
+                    Studio</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Commons</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-regular fa-circle-question"></i> Help</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse" id="collapseCourseNav">
+            <div class="card card-body">
+              <ul class="wd-navigation">
+                <li>
+                  <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                </li>
+                <li>
+                  <a href="#">Modules</a>
+                </li>
+                <li>
+                  <a href="#">Piazza</a>
+                </li>
+                <li>
+                  <a href="#">Zoom Meetings</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Assignments/screen.html"
+                    >Assignments</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Quizzes</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                </li>
+                <li>
+                  <a href="#">People</a>
+                </li>
+                <li>
+                  <a href="#">Panapto Video</a>
+                </li>
+                <li>
+                  <a href="#">Discussions</a>
+                </li>
+                <li>
+                  <a href="#">Announcement</a>
+                </li>
+                <li>
+                  <a href="#">Pages</a>
+                </li>
+                <li>
+                  <a href="#">Files</a>
+                </li>
+                <li>
+                  <a href="#">Rubrics</a>
+                </li>
+                <li>
+                  <a href="#">Outcomes</a>
+                </li>
+                <li>
+                  <a href="#">Collaborations</a>
+                </li>
+                <li>
+                  <a href="#">Syllabus</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
+                    >Settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="row d-none d-md-block">
+          <div class="va-flex-header">
+            <div><i class="fa-solid fa-bars"></i></div>
+            <div class="va-section-title">CS5610.12631.20247</div>
+            <div><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="section-curr">Settings</div>
+            <div class="va-flex-header-last va-button-grey">
+              <i class="fa-solid fa-glasses"></i>
+              <button type="button" class="va-student-view-btn">
+                Student View
+              </button>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="d-flex">
+            <div class="d-none d-md-block">
+              <ul class="wd-navigation">
+                <li>
+                  <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                </li>
+                <li>
+                  <a href="#">Modules</a>
+                </li>
+                <li>
+                  <a href="#">Piazza</a>
+                </li>
+                <li>
+                  <a href="#">Zoom Meetings</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Assignments/screen.html"
+                    >Assignments</a
+                  >
+                </li>
+                <li>
+                  <a href="#">Quizzes</a>
+                </li>
+                <li>
+                  <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                </li>
+                <li>
+                  <a href="#">People</a>
+                </li>
+                <li>
+                  <a href="#">Panapto Video</a>
+                </li>
+                <li>
+                  <a href="#">Discussions</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Announcements</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Pages</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Files</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Rubrics</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Outcomes</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Collaborations </a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li>
+                  <a href="#">Syllabus</a>
+                  <i class="fa-regular fa-eye-slash float-end"></i>
+                </li>
+                <li class="wd-active">
+                  <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
+                    >Settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex-fill ms-5 me-5">
+              <a href="/Kanbas/Courses/Settings/Course Details/screen.html"
+                >Course Details</a
+              >
+              <a href="#">Sections</a>
+              <a href="/Kanbas/Courses/Settings/Course Navigation/screen.html"
+                >Navigation</a
+              >
+              <a href="#">Apps</a>
+              <a href="#">Feature Option</a>
+              <a href="#">Integration</a>
+              <br />
+              <br />
+              <div>
+                Drag and drop items to reorder themin the course navigation
+              </div>
+              <br />
+              <table border="1" cellspacing="0" cellpadding="3" width="400">
+                <tbody>
+                  <tr>
+                    <td>&nbsp; Home</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Modules &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Piazza &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Zoom Meetings &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Assignments &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Quizzes &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Grades &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; People &vellip;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp; Panapto Video &vellip;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <div>Drag items here to hide them from students.</div>
+              <div>
+                Disabling most pages will cause students who visit those pages
+                to be redirected to the course home page.
+              </div>
+              <table border="1" cellspacing="0" cellpadding="3" width="400">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div>&nbsp; Chat &vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>&nbsp; SCORM &vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>&nbsp; Attendance &vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>&nbsp; Barnes and nobel Bookstore&vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>&nbsp; Digication &vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>&nbsp; Top Hat &vellip;</div>
+                      <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp; Page disabled, wont appear in
+                        navigation
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

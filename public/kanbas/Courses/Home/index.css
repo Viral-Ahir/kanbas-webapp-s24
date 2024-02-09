@@ -1,0 +1,164 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: #eee;
+  border: 1px solid #ddd !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 12px;
+  border-left: 1px solid #ddd !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 12px;
+  border-top: 1px solid #ddd !important;
+  border-left: 4px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+/* .wd-modules > li > ul > li:first-child {
+  font-weight: 600;
+} */
+
+.wd-modules > li > ul > li:not(:first-child) > i {
+  margin-right: 25px;
+}
+
+.va-home-top-button-flex {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.va-home-status-ul {
+  margin-top: 10px;
+  padding-left: 0px;
+}
+
+.va-home-status-ul > li {
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+.va-flex-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.va-section-title {
+  color: red;
+}
+
+.va-flex-header-last {
+  margin-left: auto;
+}
+
+.va-student-view-btn {
+  margin-left: 5px;
+  border: none;
+}
+
+.va-flex-header-mini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #111;
+  padding: 15px;
+  gap: 10px;
+  justify-content: space-between;
+  color: #eee;
+}
+
+.va-colour-white {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.va-button-black {
+  background-color: #111;
+  border: none;
+  display: flex;
+  gap: 30px;
+}
+
+.va-section-title-mini {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.va-section-title-mini {
+  color: #eee;
+}
+
+.va-comming-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.va-comming-up-title {
+  font-weight: 600;
+  /* font-size: 14px; */
+}
+
+.va-view-cal {
+  color: red;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.va-comming-list-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.va-comming-list-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  /* margin-right: 20px; */
+}
+
+.va-comming-list-item-head {
+  color: red;
+  font-weight: 600;
+}
+
+.va-todo-symbol-1 {
+  padding: 0px 7px;
+  background-color: rgb(236, 15, 15);
+  border-radius: 50%;
+  color: white;
+}
+
+.va-todo-cross-mark {
+  /* justify-self: flex-end; */
+  margin: 0 0 0 auto;
+}
