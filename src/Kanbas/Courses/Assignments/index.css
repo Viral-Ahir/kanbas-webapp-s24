@@ -1,0 +1,176 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: #eee;
+  border: 1px solid #ddd !important;
+  border-left: none !important;
+}
+
+.va-asmt-list-head {
+  padding: 12px;
+  border-left: 1px solid #ddd !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 12px;
+  border-top: 1px solid #ddd !important;
+  border-left: 4px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.va-home-top-button-flex {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.va-home-status-ul {
+  margin-top: 10px;
+  padding-left: 0px;
+}
+
+.va-home-status-ul > li {
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+.va-flex-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+}
+
+.va-section-title {
+  color: red;
+}
+
+.va-flex-header-last {
+  margin-left: auto;
+}
+
+.va-student-view-btn {
+  margin-left: 5px;
+  border: none;
+}
+
+.va-flex-header-mini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #111;
+  padding: 15px;
+  gap: 10px;
+  justify-content: space-between;
+  color: #eee;
+}
+
+.va-colour-white {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.va-button-black {
+  background-color: #111;
+  border: none;
+  display: flex;
+  gap: 30px;
+}
+
+.va-section-title-mini {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.va-section-title-mini {
+  color: #eee;
+}
+
+.va-asmt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.va-asmt-search {
+  padding: 5px 10px;
+  padding-right: 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.va-asmt-btn-round {
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  /* display: inline; */
+}
+
+.va-asmt-list-container {
+  background-color: #fff;
+  border-left: 4px solid green;
+}
+
+.va-asmt-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+}
+
+.va-asmt-book {
+  color: green;
+}
+
+.va-asmt-list-item-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.va-asmt-title-cont {
+  margin-left: 10px;
+}
+
+.va-asmt-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.va-asmt-title > a {
+  color: #111;
+  text-decoration: none;
+}
+
+.va-asmt-cont {
+  color: #444;
+  font-size: 12px;
+}
+
+.va-asmt-list-item-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
