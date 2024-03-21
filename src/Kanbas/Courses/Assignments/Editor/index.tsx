@@ -3,35 +3,53 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import "./index.css";
 import { assignments } from "../../../Database";
 import { FaCircleCheck, FaEllipsisVertical } from "react-icons/fa6";
+import { KanbasState } from "../../../store";
+import {
+  addAssignment,
+  updateAssignment,
+  setAssignment,
+} from "../assignmentsReducer";
+import { useDispatch, useSelector } from "react-redux";
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId
-  );
-  const { courseId } = useParams();
+  const { courseId, assignmentId } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const assignment = useSelector(
+    (state: KanbasState) => state.assignmentsReducer.assignment
+  );
+  const dueDate = assignment?.dueDate.split("T")[0];
+  const availableFromDate = assignment?.availableFromDate.split("T")[0];
+  const availableUntilDate = assignment?.availableUntilDate.split("T")[0];
+
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    if (assignmentId !== "new") {
+      dispatch(updateAssignment(assignment));
+    } else {
+      dispatch(addAssignment({ ...assignment, course: courseId }));
+    }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
+  const handleCancel = () => {
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
+  console.log(assignment);
+
   return (
     <div className="flex-fill ms-5 me-5">
-      {/* <h2>Assignment Name</h2> */}
       <div className="va-asmt-edit-header">
         <div className="va-asmt-header-right">
           <button className="va-button-in-green">
             <FaCircleCheck className="me-2" />
-            {/* <i className="fa-solid fa-circle-check me-2"></i> */}
             Published
           </button>
           <button className="va-button-grey me-3">
             <FaEllipsisVertical />
-            {/* <i className="fa-solid fa-ellipsis-vertical"></i> */}
           </button>
         </div>
       </div>
       <hr />
-      <form action="../screen.html">
+      <form method="POST">
         <div className="ms-5">
           <div className="row mt-2">
             <label className="ps-0" htmlFor="assignment_name">
@@ -39,10 +57,15 @@ function AssignmentEditor() {
             </label>
             <input
               type="text"
-              name="assignment_name"
+              name="assignmentName"
               id="assignment_name"
               className="form-control"
               value={assignment?.title}
+              onChange={(e) =>
+                dispatch(
+                  setAssignment({ ...assignment, title: e.target.value })
+                )
+              }
             />
           </div>
           <div className="row mt-3">
@@ -52,14 +75,13 @@ function AssignmentEditor() {
               cols={20}
               rows={10}
               className="form-control"
+              onChange={(e) =>
+                dispatch(
+                  setAssignment({ ...assignment, description: e.target.value })
+                )
+              }
             >
-              Assignment Description - Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quas commodi officiis quisquam, omnis incidunt
-              blanditiis alias magni quidem iusto eos sunt minus similique!
-              Aspernatur sequi consequuntur voluptatem mollitia quis quibusdam
-              autem libero dolore quo iure? Magni omnis eius, repellendus quo
-              voluptatibus sunt repellat odio in quisquam dolore assumenda enim
-              distinctio.
+              {assignment?.description}
             </textarea>
           </div>
           <div className="row mt-3">
@@ -74,12 +96,18 @@ function AssignmentEditor() {
                 id="points"
                 min="0"
                 max="100"
-                value="100"
+                // value="100"
+                value={assignment?.points}
                 className="form-control"
+                onChange={(e) =>
+                  dispatch(
+                    setAssignment({ ...assignment, points: e.target.value })
+                  )
+                }
               />
             </div>
           </div>
-          <div className="row mt-3">
+          {/* <div className="row mt-3">
             <div className="col-3">
               <label
                 className="form-label float-end"
@@ -113,9 +141,8 @@ function AssignmentEditor() {
                 <option value="Percentage">Percentage</option>
               </select>
             </div>
-          </div>
-
-          <div className="row mt-5">
+          </div> */}
+          {/* <div className="row mt-5">
             <div className="col-3">
               <label className="form-label float-end" htmlFor="submission-type">
                 Submission Type
@@ -157,8 +184,7 @@ function AssignmentEditor() {
               </label>
               <br />
             </div>
-          </div>
-
+          </div> */}
           <div className="row mt-3">
             <div className="col-3">
               <label className="form-label float-end" htmlFor="Assign">
@@ -188,7 +214,15 @@ function AssignmentEditor() {
                     className="form-control"
                     id="Due"
                     type="date"
-                    value="2021-01-01"
+                    value={dueDate}
+                    onChange={(e) =>
+                      dispatch(
+                        setAssignment({
+                          ...assignment,
+                          dueDate: e.target.value,
+                        })
+                      )
+                    }
                   />
                 </div>
 
@@ -200,7 +234,15 @@ function AssignmentEditor() {
                     className="form-control"
                     id="available-from"
                     type="date"
-                    value="2021-01-01"
+                    value={availableFromDate}
+                    onChange={(e) =>
+                      dispatch(
+                        setAssignment({
+                          ...assignment,
+                          availableFromDate: e.target.value,
+                        })
+                      )
+                    }
                   />
                 </div>
 
@@ -213,7 +255,15 @@ function AssignmentEditor() {
                     className="form-control"
                     id="until"
                     type="date"
-                    value="2021-01-01"
+                    value={availableUntilDate}
+                    onChange={(e) =>
+                      dispatch(
+                        setAssignment({
+                          ...assignment,
+                          availableUntilDate: e.target.value,
+                        })
+                      )
+                    }
                   />
                 </div>
 
@@ -236,7 +286,11 @@ function AssignmentEditor() {
             </div>
             <div className="va-asmt-header-right me-4">
               <Link to={`/Kanbas/Courses/${courseId}/Assignments`}>
-                <button className="va-button-grey" type="submit">
+                <button
+                  onClick={handleCancel}
+                  className="va-button-grey me-2"
+                  type="submit"
+                >
                   Cancel
                 </button>
               </Link>

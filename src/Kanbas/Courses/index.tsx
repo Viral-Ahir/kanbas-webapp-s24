@@ -18,9 +18,9 @@ import { FaChevronRight } from "react-icons/fa";
 import { FaGlasses } from "react-icons/fa6";
 import "../styles.css";
 import "./index.css";
-function Courses() {
+function Courses({ coursesList }: { coursesList: any[] }) {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const course = coursesList.find((course) => course._id === courseId);
   const { pathname } = useLocation();
   const paths = pathname.split(/Courses\/[a-zA-Z0-9]+\//)[1];
   let currentPath = paths.split("/")[0];
